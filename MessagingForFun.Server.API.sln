@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagingForFun.Server.API", "MessagingForFun.Server.API\MessagingForFun.Server.API.csproj", "{EA41D201-036A-46E2-A7EA-EA7346FB69B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessagingForFun.Server.Worker", "MessagingForFun.Server.Worker\MessagingForFun.Server.Worker.csproj", "{4116C7EF-6AD8-4024-860C-4DA03C736DE0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EA41D201-036A-46E2-A7EA-EA7346FB69B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EA41D201-036A-46E2-A7EA-EA7346FB69B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EA41D201-036A-46E2-A7EA-EA7346FB69B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EA41D201-036A-46E2-A7EA-EA7346FB69B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4116C7EF-6AD8-4024-860C-4DA03C736DE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4116C7EF-6AD8-4024-860C-4DA03C736DE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4116C7EF-6AD8-4024-860C-4DA03C736DE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4116C7EF-6AD8-4024-860C-4DA03C736DE0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

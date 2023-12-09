@@ -1,13 +1,36 @@
-version: '2'
+﻿services:
+  messaging-for-fun.server.api:
+    build:
+      context: ./
+      dockerfile: ./MessagingForFun.Server.API/Dockerfile
+    container_name: messaging-for-fun.server.api
+    ports:
+      - "3130:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+    networks:
+      - messaging-for-fun-network
+
+  messaging-for-fun.server.worker:
+    build:
+      context: ./
+      dockerfile: ./MessagingForFun.Server.Worker/Dockerfile
+    container_name: messaging-for-fun.server.worker
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Docker
+    networks:
+      - messaging-for-fun-network
+
+  redis:
+    image: 'bitnami/redis:latest'
+    container_name: redis
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    ports:
+      - "6379:6379"
+    networks:
+      - messaging-for-fun-network
 
 networks:
   messaging-for-fun-network:
-    driver: bridge
-
-services:
-  redis:
-    image: 'bitnami/redis:latest'
-    environment:
-      - ALLOW_EMPTY_PASSWORD=yes
-    networks:
-      - messaging-for-fun-network 
+    name: messaging-for-fun-network

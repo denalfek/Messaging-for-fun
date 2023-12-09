@@ -5,10 +5,10 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["MessagingForFun.Server.API.csproj", "./"]
-RUN dotnet restore "MessagingForFun.Server.API.csproj"
+COPY ["MessagingForFun.Server.API/MessagingForFun.Server.API.csproj", "MessagingForFun.Server.API/"]
+RUN dotnet restore "MessagingForFun.Server.API/MessagingForFun.Server.API.csproj"
 COPY . .
-WORKDIR "/src/"
+WORKDIR "/src/MessagingForFun.Server.API"
 RUN dotnet build "MessagingForFun.Server.API.csproj" -c Release -o /app/build
 
 FROM build AS publish

@@ -1,5 +1,14 @@
 
+.idea/
+
+
 MessagingForFun.Server.API/.idea/
 MessagingForFun.Server.API/obj/
 MessagingForFun.Server.API/bin/
 MessagingForFun.Server.API/Properties/launchSettings.json
+
+MessagingForFun.Server.Worker/.idea/
+MessagingForFun.Server.Worker/obj/
+MessagingForFun.Server.Worker/bin/
+MessagingForFun.Server.Worker/Properties/launchSettings.json
+

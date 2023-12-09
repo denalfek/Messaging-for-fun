@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+using MessagingForFun.Server.API.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace MessagingForFun.Server.API.Controllers;
@@ -28,5 +30,14 @@ public class WeatherForecastController : ControllerBase
             Summary = Summaries[Random.Shared.Next(Summaries.Length)]
         })
         .ToArray();
+    }
+    
+    [HttpPost("message")]
+    public async Task<IActionResult> PostMessage(
+        [FromServices]IRedisService redisService,
+        [Required][MaxLength(128)][FromBody]string message)
+    {
+        await redisService.Publish("test_channel", message);
+        return Ok();
     }
 }
