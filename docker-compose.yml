@@ -1,0 +1,13 @@
+version: '2'
+
+networks:
+  messaging-for-fun-network:
+    driver: bridge
+
+services:
+  redis:
+    image: 'bitnami/redis:latest'
+    environment:
+      - ALLOW_EMPTY_PASSWORD=yes
+    networks:
+      - messaging-for-fun-network 
