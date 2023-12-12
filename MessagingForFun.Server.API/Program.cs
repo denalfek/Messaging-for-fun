@@ -3,6 +3,17 @@ using MessagingForFun.Server.API.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = builder
+        .Configuration
+        .GetSection("Redis")
+        .GetSection("ConnectionString")
+        .Value;
+    
+    options.InstanceName = "MessagingForFun";
+});
+
 builder.Services.AddSingleton<IRedisService, RedisService>(provider =>
 {
     var configuration = provider.GetRequiredService<IConfiguration>();

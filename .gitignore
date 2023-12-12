@@ -7,8 +7,15 @@ MessagingForFun.Server.API/obj/
 MessagingForFun.Server.API/bin/
 MessagingForFun.Server.API/Properties/launchSettings.json
 
-MessagingForFun.Server.Worker/.idea/
-MessagingForFun.Server.Worker/obj/
-MessagingForFun.Server.Worker/bin/
-MessagingForFun.Server.Worker/Properties/launchSettings.json
+MessagingForFun.Server.MainWorker/.idea/
+MessagingForFun.Server.MainWorker/obj/
+MessagingForFun.Server.MainWorker/bin/
+MessagingForFun.Server.MainWorker/Properties/launchSettings.json
 
+MessagingForFun.Server.Worker1/.idea/
+MessagingForFun.Server.Worker1/obj/
+MessagingForFun.Server.Worker1/bin/
+MessagingForFun.Server.Worker1/Properties/launchSettings.json
+
+MessagingForFun.Infrastructure/bin/
+MessagingForFun.Infrastructure/obj/

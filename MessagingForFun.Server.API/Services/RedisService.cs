@@ -14,7 +14,7 @@ public class RedisService : IRedisService
     public async Task Publish(string channel, string message)
     {
         var db = _connectionMultiplexer.GetDatabase();
-        await db.PublishAsync(channel, message);
+        var d = await db.StringSetAsync(channel, message);
     }
 
     public async Task Subscribe(string channel, Action<RedisChannel, RedisValue> action)

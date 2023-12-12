@@ -40,4 +40,13 @@ public class WeatherForecastController : ControllerBase
         await redisService.Publish("test_channel", message);
         return Ok();
     }
+    
+    [HttpGet("message")]
+    public async Task<IActionResult> GetMessage(
+        [FromServices]IRedisService redisService,
+        [Required][MaxLength(128)][FromBody]string channel)
+    {
+        // await redisService.Subscribe("test_channel");
+        return Ok(channel);
+    }
 }
